@@ -5,17 +5,6 @@
  */
 package com.goeuro.service.Imp;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.goeuro.customexception.CustomException;
 import com.goeuro.dto.PlaceDto;
 import com.goeuro.service.Connection;
@@ -23,6 +12,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -33,6 +31,12 @@ public class ConnectionImp implements Connection {
 
     public static final String SERVICE_URL = "http://api.goeuro.com/api/v2/position/suggest/en/";
 
+    /**
+     *
+     * @param  place_name
+     * @return HttpURLConnection
+     * @throws CustomException
+     */
     @Override
     public HttpURLConnection getConnection(String place_name) throws CustomException {
         HttpURLConnection conn = null;
@@ -52,6 +56,12 @@ public class ConnectionImp implements Connection {
         }
     }
 
+    /**
+     *
+     * @param conn
+     * @return List of PlaceDto
+     * @throws CustomException
+     */
     @Override
     public List<PlaceDto> getResponse(HttpURLConnection conn) throws CustomException {
         ArrayList<PlaceDto> placeList = new ArrayList<PlaceDto>();

@@ -18,7 +18,7 @@ public class Test {
     public static void main(String[] args) {
         String placeName=" ";
         if(args.length!=0)
-            placeName=args[0];
+         ll   placeName=args[0];
         ControllerImp controller = new ControllerImp();
         controller.run(placeName);
     }

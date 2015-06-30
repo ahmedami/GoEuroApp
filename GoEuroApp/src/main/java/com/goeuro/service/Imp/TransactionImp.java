@@ -20,6 +20,11 @@ import com.goeuro.service.Transaction;
  */
 public class TransactionImp implements Transaction {
 
+    /**
+     *
+     * @param placeDto
+     * @return ResponseDto
+     */
     @Override
     public ResponseDto savePlaceInfo(PlaceDto placeDto) {
         ResponseDto response = new ResponseDto();
@@ -37,6 +42,11 @@ public class TransactionImp implements Transaction {
         }
     }
 
+    /**
+     *
+     * @param placeDto
+     * @return ResponseDto
+     */
     @Override
     public ResponseDto find(PlaceDto placeDto) {
         ResponseDto response = new ResponseDto();
@@ -56,6 +66,10 @@ public class TransactionImp implements Transaction {
 
     }
 
+    /**
+     *
+     * @return ResponseDto
+     */
     @Override
     public ResponseDto closeStream() {
         ResponseDto response = new ResponseDto();

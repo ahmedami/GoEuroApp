@@ -25,6 +25,7 @@ public class ResponseDto {
     private boolean connected;
     private boolean empty;
 
+
     public boolean isConnected() {
         return connected;
     }

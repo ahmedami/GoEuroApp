@@ -5,16 +5,15 @@
  */
 package com.goeuro.dao.Imp;
 
+import com.goeuro.customexception.CustomException;
+import com.goeuro.dao.PlaceDao;
+import com.goeuro.pojo.Place;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.util.Scanner;
-
-import com.goeuro.customexception.CustomException;
-import com.goeuro.dao.PlaceDao;
-import com.goeuro.pojo.Place;
 
 
 
@@ -24,6 +23,11 @@ import com.goeuro.pojo.Place;
  */
 public class PlaceDaoImp implements PlaceDao {
 
+    /**
+     *
+     * @param place
+     * @throws CustomException
+     */
     @Override
     public void presist(Place place) throws CustomException {
         FileWriter writer = null;
@@ -50,6 +54,12 @@ public class PlaceDaoImp implements PlaceDao {
 
     }
 
+    /**
+     *
+     * @param id
+     * @return boolean
+     * @throws CustomException
+     */
     @Override
     public boolean findById(String id) throws CustomException {
         boolean result = false;

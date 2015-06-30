@@ -5,12 +5,11 @@
  */
 package com.goeuro.service;
 
-import java.net.HttpURLConnection;
-
-import java.util.List;
-
 import com.goeuro.customexception.CustomException;
 import com.goeuro.dto.PlaceDto;
+
+import java.net.HttpURLConnection;
+import java.util.List;
 
 
 /**

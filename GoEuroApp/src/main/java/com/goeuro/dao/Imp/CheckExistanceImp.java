@@ -5,12 +5,12 @@
  */
 package com.goeuro.dao.Imp;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.FileWriter;
-
 import com.goeuro.customexception.CustomException;
 import com.goeuro.dao.CheckExistance;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 /**
@@ -30,6 +30,11 @@ public class CheckExistanceImp implements CheckExistance {
         return check;
     }
 
+    /**
+     *
+     * @return FileWriter object
+     * @throws CustomException
+     */
     @Override
     public FileWriter CreateFileIFNotExist() throws CustomException {
 
@@ -62,6 +67,10 @@ public class CheckExistanceImp implements CheckExistance {
         }
     }
 
+    /**
+     *
+     * @throws CustomException
+     */
     @Override
     public void closeStream() throws CustomException {
         try {

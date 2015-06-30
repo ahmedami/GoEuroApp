@@ -5,20 +5,18 @@
  */
 package com.goeuro.facade.Imp;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import java.net.HttpURLConnection;
-
-import java.util.List;
-
 import com.goeuro.customexception.CustomException;
 import com.goeuro.dto.PlaceDto;
 import com.goeuro.dto.ResponseDto;
 import com.goeuro.facade.Controller;
 import com.goeuro.service.Imp.ConnectionImp;
 import com.goeuro.service.Imp.TransactionImp;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.util.List;
 
 /**
  *
@@ -30,6 +28,10 @@ public class ControllerImp implements Controller {
     private ResponseDto response;
     private String placeName;
 
+    /**
+     *
+     * @param place_name
+     */
     @Override
     public void run(String place_name) {
         this.placeName = place_name;
@@ -55,6 +57,12 @@ public class ControllerImp implements Controller {
         }
     }
 
+    /**
+     *
+     * @param place_name
+     * @return List of PlaceDto
+     * @throws CustomException
+     */
     @Override
     public List<PlaceDto> getPlacesInfo(String place_name) throws CustomException {
         List<PlaceDto> placesList;
@@ -81,6 +89,10 @@ public class ControllerImp implements Controller {
         return placesList;
     }
 
+    /**
+     *
+     * @param place_name
+     */
     @Override
     public void savePlaceInfo(String place_name) {
         List<PlaceDto> placeList;
@@ -111,6 +123,10 @@ public class ControllerImp implements Controller {
 
     }
 
+    /**
+     *
+     * @param response
+     */
     @Override
     public void display(ResponseDto response) {
 
