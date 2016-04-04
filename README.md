@@ -1,5 +1,5 @@
-# GoEuroApp
-It's an Application for GoEuro Travel Company.
+# GoApp
+Make a Prisestance layar based on CSV.
 
 ## Architecture
 ![alt tag](https://github.com/ahmedami/GoEuroApp/blob/master/Architecture.png)
